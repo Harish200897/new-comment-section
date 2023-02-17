@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment section</title>
+</head>
+<body>
+     
+        <div class="container">
+        <h1 class="mb-4">Commments</h1>
+
+    <form action="/comments" method="POST">
+      
+        <div class="form-group">
+        <label for="UserName">UserName</label>
+        <input required value="<%= comment.UserName  %>" type="text" name="UserName" id="UserName" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label for="UserId">UserId</label>
+        <input required value="<%=  comment.UserId  %>" type="text" name=" UserId" id=" UserId" class="form-control">
+        </div>
+        
+        <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" id="description"  class="form-control"><%= comment.description %></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+         
+</body>
+</html>
